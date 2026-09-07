@@ -5,37 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blinker</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/7324caa814.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="app">
-    <div class="flex flex-col">
-      <div class="navbar flex flex-col">
-        <div class="flex content-wrapper justify-between align-center">
-          <div class="logo">
-            <img src="" alt="Blinker Logo" class="logo">
-          </div>
-          <div class="links flex align-center justify-between">
-            <a href="" class="link router-link-active">Home</a>
-            <a href="" class="link router-link-exact-active router-link-active">pick your movie</a>
-            <a href="" class="btn-contact">Contact</a>
-          </div>
-          <div id="phone-nav">
-
-          </div>
-        </div>
-        <div class="content-wrapper flex-col align-center">
-          <h1>Explore Our Movies</h1>
-          <div class="input-wrapper">
-            <input type="text" placeholder="Search by Title">
-            <div class="search-wrapper flex justify-center align-center">
-              <i class="fa-search">
-
-              </i>
+    <div class="app">
+      <div class="flex flex-col background">
+        <div class="navbar flex flex-col">
+          <div class="flex content-wrapper justify-between align-center nav">
+            <div class="logo">
+              <img src="	https://dev.d24jig8s1lr7n9.amplifyapp.com/img/whitelogo.39850b27.png" alt="Blinker Logo" class="logo">
+            </div>
+            <div class="links flex align-center justify-between">
+              <a href="" class="link router-link-active">Home</a>
+              <a href="" class="link router-link-exact-active router-link-active">pick your movie</a>
+              <a href="" class="btn-contact">Contact</a>
             </div>
           </div>
-        </div>
-        <div class="overlay">
+          <div class="content-wrapper flex-col align-center">
+            <h1>Explore Our Movies</h1>
+            <div class="input-wrapper">
+             <input type="text" placeholder="Search by Title" onChange="onSearchChange(event)">
+              <div class="search-wrapper flex justify-center align-center">
+                <i 
+                  class="fa-solid     fa-magnifying-glass">
+                </i>
+              </div>
+            </div>
+          </div>
+          <div class="overlay">
           
+          </div>
         </div>
       </div>
       <section id="search">
@@ -52,16 +51,15 @@
         </div>
         <div id="filter" class="content-wrapper justify-between">
           <h1 class="search-info">
-            <span class="black-txt">Search results for
+            <span class="black-txt">Search results for:
             </span>
+            <span class="search-term"><span class="searchName">
+
+            </span></span>
           </h1>
         </div>
         <div id="movies">
-          <div class="content-wrapper">
-            <div class="loading-state flex justify-center">
-
-            </div>
-          </div>
+         
         </div>
       </section>
     </div>
