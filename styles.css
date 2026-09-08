@@ -112,3 +112,12 @@ input {
   font-size: 24px;
   margin-left: 16px;
 }
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  font-size: 72px
+}
