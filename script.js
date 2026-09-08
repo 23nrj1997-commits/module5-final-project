@@ -8,14 +8,15 @@ async function getMovies(searchTerm) {
   const data = await response.json();
   console.log(data.Search);
   moviesWrapper.innerHTML = data.Search.map((movie) => 
-    { return
-      `<div class="movie">
+    { return `<div class="movie">
         <img src="${movie.Poster}" alt="Poster">
         <h2>${movie.Title}</h2>
         <h4>Year: ${movie.Year}</h4>
         <button>Learn More</button>
       </div>`
     })
+    .slice(0, 6)
+    .join("");
 }
 
 function onSearchChange(event) {
