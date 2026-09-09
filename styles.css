@@ -136,6 +136,16 @@ input {
   margin-left: 16px;
 }
 
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 .movies {
   display: flex;
   flex-wrap: wrap;
@@ -173,7 +183,7 @@ footer {
   text-align: center;
   padding: 20px 0;
   position: relative;
-  bottom: -385px;
+  bottom: -410px;
   width: 100%;
 }
 
