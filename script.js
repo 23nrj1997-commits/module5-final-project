@@ -8,7 +8,7 @@ async function getMovies(searchTerm) {
   const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=b8073ce3&s=${searchTerm}`);
   nameWrapper.innerHTML = searchTerm;
   const data = await response.json();
-  movies = data.Search || [];
+  movies = data.Search;
   console.log(data.Search);
   moviesWrapper.innerHTML = data.Search.map((movie) => 
     { return `<div class="movie">
