@@ -10,20 +10,26 @@ async function getMovies(searchTerm) {
   const data = await response.json();
   movies = data.Search;
   console.log(data.Search);
-  moviesWrapper.innerHTML = data.Search.map((movie) => 
-    { return `<div class="movie">
-        <img src="${movie.Poster}" alt="Poster">
-        <h2>${movie.Title}</h2>
-        <h4>Year: ${movie.Year}</h4>
-        <button>Learn More</button> </div>`
-    })
-    .slice(0, 6)
-    .join("");
+  renderMovies(movies);
 }
 
 function onSearchChange(event) {
   console.log(event.target.value);
   getMovies(event.target.value);
+}
+
+function renderMovies(movieList) {
+    moviesWrapper.innerHTML = movieList
+        .slice(0, 6)
+        .map((movie) => {
+            return `<div class="movie">
+                <img src="${movie.Poster}" alt="Poster">
+                <h2>${movie.Title}</h2>
+                <h4>Year: ${movie.Year}</h4>
+                <button>Learn More</button>
+            </div>`;
+        })
+        .join("");
 }
 
 function filterMovies(event) {
